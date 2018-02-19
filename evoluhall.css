@@ -1,0 +1,144 @@
+﻿
+a:link	{
+	font-weight: bold;
+	color: gray;
+} 
+
+a:active {
+	font-weight: bold;
+}
+
+a:visited {
+ color: gray;
+ }
+
+a:hover {
+ color: black;
+}
+table {
+    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+	width:300px;
+	height:300px;
+	text-align: center;
+}
+td {
+	border: 1px solid black; /* auront une bordure de 1px */
+}
+#td
+{ 
+  overflow:hidden;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
+.infobulle {
+  position: relative;  /* les .infobulle deviennent référents */
+  cursor: help;
+}
+
+/* on génère un élément :after lors du survol et du focus :*/
+
+.infobulle:hover::after,
+.infobulle:focus::after {
+  content: attr(aria-label);  /* on affiche aria-label */
+  position: absolute;
+  top: -20px;
+  right: 2px;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%); /* on centre horizontalement  */
+  z-index: 100; /* pour s'afficher au dessus des éléments en position relative */
+  white-space: nowrap;  /* on interdit le retour à la ligne */
+  background-color: black;
+  color: white;
+}
+h3 {
+    text-align: center;
+	margin-top:0;
+
+}
+#fixe
+{
+    position: fixed;
+	width: 700px;
+	left: 50%;
+	top: 10px;
+	margin-left: -350px;
+	border-style: dotted;
+	padding: 10px;
+	z-index: 100;
+	background: white;
+}
+#fixe2
+{
+
+	border-style: dotted;
+	padding: 10px;
+	background: white;
+	text-align: center;
+	
+	position: relative;
+	top: 50px;
+	 margin-left: auto;
+     margin-right: auto;
+	 width: max-content;
+	 margin-bottom: 20px;
+}
+#fintour
+{
+	position: fixed; 
+	width:  max-content;
+	top: 50px;
+	left: 50px;
+	height: max-content;
+	border-style: dotted;
+	padding: 10px;
+}
+.content
+{
+	position: relative;
+	top: 40px;
+	 margin-left: auto;
+     margin-right: auto;
+	 width: 800px;
+	background-color: #DFDFDF;
+	padding: 10px;
+	border-style: dotted;
+	border-color: white;
+	margin-bottom: 10px;
+}
+#content
+{
+	position: relative;
+	top: 40px;
+	 margin-left: auto;
+     margin-right: auto;
+	 width: 800px;
+	background-color: #DFDFDF;
+	padding: 10px;
+	border-style: dotted;
+	border-color: white;
+	margin-bottom: 10px;
+}
+#content2
+{
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #DFDFDF;
+	padding: 10px;
+}
+.bottom
+{
+	position: absolute;
+	right:10px;
+	width: max-content;
+	border-style: dotted;
+	padding: 5px;
+	background-color: white;
+	margin-top: 50px;
+	margin-bottom: 10px;
+
+}

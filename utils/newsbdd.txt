@@ -1,0 +1,5 @@
+Dans ce document nous listerons les modifs de la bdd pour mettre à jour nos bdd locales
+
+Date  
+Commande à executer.
+
