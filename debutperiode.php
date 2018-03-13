@@ -16,6 +16,8 @@ include('fixe.php');
   echo 'J ai vidé la table creatures<br>';
   $dbh->exec('UPDATE joueur SET _pi=0');// Ràz des Points d'investissement
   echo 'J ai mis les Pis de tous les joueurs à zéro<br>';
+  $dbh->exec('UPDATE joueur SET _repro=0');// Ràz du facteur reproduction
+  echo 'J ai mis le facteur reproduction de tous les joueurs à zéro<br>';
   $dbh->exec('UPDATE nid SET idj=0');// Ràz des propriétaire des nids
   echo 'Tous les nids n ont plus de propriétaire<br>';
   $dbh->exec('UPDATE joueur SET _nid=0');// Ràz des nids des joueurs
