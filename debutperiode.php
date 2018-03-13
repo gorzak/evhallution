@@ -14,15 +14,13 @@ include('fixe.php');
   echo 'J ai vidé la table plantes<br>';
   $dbh->exec('DELETE FROM creatures');// suppression des créatures
   echo 'J ai vidé la table creatures<br>';
-  $dbh->exec('UPDATE joueur SET _pi=0');// Ràz des Points d'investissement
+  $dbh->exec('UPDATE joueur SET _pi=0');// Ràz des Points d'investissement	
   echo 'J ai mis les Pis de tous les joueurs à zéro<br>';
-  $dbh->exec('UPDATE joueur SET _repro=0');// Ràz du facteur reproduction
-  echo 'J ai mis le facteur reproduction de tous les joueurs à zéro<br>';
   $dbh->exec('UPDATE nid SET idj=0');// Ràz des propriétaire des nids
   echo 'Tous les nids n ont plus de propriétaire<br>';
   $dbh->exec('UPDATE joueur SET _nid=0');// Ràz des nids des joueurs
   echo 'Tous les joueurs n ont plus de nids<br>';
-  $dbh->exec('UPDATE joueur SET _repro=0');// Ràz du taux de reproduction des joueurs
+  $dbh->exec('UPDATE joueur SET _repro=0');// Ràz du facteur de reproduction
   echo 'Tous les joueurs ont leur repro à 0<br>';
   $dbh->exec('UPDATE joueur SET _famineMAX=DEFAULT, _pa=DEFAULT, _vue=DEFAULT, _dureedla=DEFAULT ');// Ràz des statistiques des joueurs
   echo 'Tous les joueurs ont leurs stats de races à défaut<br>';
