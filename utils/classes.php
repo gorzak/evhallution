@@ -155,9 +155,9 @@ class creature {
     /* A MODIFIER SELON LES CARACS DU JOUEURS */
     public static function Naissancecreatures($x,$y,$owner) {
     /* fais naitre une creature dans la db, à la position x,y, même owner, et event naissance et stat naissance*/
-	/* sans famine, 6 pa */
+	/* famine à 0, 6 pa */
     $dbh = Database::connect();
-    $sth = $dbh->prepare("INSERT INTO creatures (`_x`, `_y`, `_famine`, `_pa`, `_vue`, `_owner`) VALUES (?,?,2,6,3,?) ");
+    $sth = $dbh->prepare("INSERT INTO creatures (`_x`, `_y`, `_famine`, `_pa`, `_vue`, `_owner`) VALUES (?,?,0,6,3,?) ");
     $sth->execute(array($x,$y,$owner));
     $dbh=null;
   }
